@@ -1,3 +1,7 @@
+.. image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
+  :target: https://github.com/LegrandNico/mne-hmm/blob/master/LICENSE
+
+----------------
 
 An introduction to Hidden Markov Modelling for electrophysiological data.
 
@@ -5,32 +9,52 @@ This repository introduce Hidden Markov Modelling (HMM) of electrophysiological 
 
 The HMM inference is realized using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
-Envelope threshold and HMM
-==========================
 
-Simulation of transient high frequency events, following [#]_ and [#]_
+Envelope threshold and Envelope HMM
+===================================
+
+Time-course Simulation
+----------------------
+
+Simulation of transient high frequency events, adapted from [#]_ and [#]_.
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Simulation.png
   :align:   center
 
+Narrow band detection
+---------------------
+
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/NarrowBand.png
   :align:   center
+
+Wider band detection
+--------------------
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/WiderBand.png
   :align:   center
 
+
 Time Delay Embedded HMM
 =======================
 
-Implementation of the Time Delay Embedded HMM (TDE-HMM) described in [#]_.
+TDE-HMM inference
+-----------------
+
+Implementation of the Time Delay Embedded HMM (TDE-HMM) described in [#]_. Unlike the simple thresholding approach, this model embeds at each time point a lagged representation of the signal [t-n:t+n], and has then access to the whole frequency spectrum, and is able to disambiguate between burst of different frequencies.
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/tde-hmm.png
   :align:   center
 
+
+State-specific power spectra
+----------------------------
+
+The frequency content of the three states show that the model successfully discriminated between the 25 Hz burst, the 40 Hz burst and the noise.
+
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Spectral0.png
   :align:   center
 
-.. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Spectral.png
+.. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Spectral1.png
   :align:   center
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Spectral2.png
