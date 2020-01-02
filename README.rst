@@ -5,18 +5,18 @@
 
 This repository introduce Hidden Markov Modelling (HMM) for electrophysiological data using the methods described in [#]_ and [#]_. The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
-Notebooks:
-----------
+Notebooks
+=========
 
   -  `Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
 
   -  `Time Delay Embedded HMM <https://github.com/LegrandNico/mne-hmm/blob/master/2%20-%20Embedded%20HMM.ipynb>`_.
 
 1- Envelope threshold and Envelope HMM
-===================================
+--------------------------------------
 
 Time-course Simulation
-----------------------
+======================
 
 Simulation of transient high frequency events, adapted from [#]_ and [#]_.
 
@@ -24,23 +24,23 @@ Simulation of transient high frequency events, adapted from [#]_ and [#]_.
   :align:   center
 
 Narrow band detection
----------------------
+=====================
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/NarrowBand.png
   :align:   center
 
 Wider band detection
---------------------
+====================
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/WiderBand.png
   :align:   center
 
 
 2 - Time Delay Embedded HMM
-=======================
+---------------------------
 
 TDE-HMM inference
------------------
+=================
 
 Implementation of the Time Delay Embedded HMM (TDE-HMM) described in [#]_. Unlike the simple thresholding approach, this model embeds at each time point a lagged representation of the signal [t-n:t+n], and has then access to the whole frequency spectrum, and is able to disambiguate between burst of different frequencies.
 
@@ -49,7 +49,7 @@ Implementation of the Time Delay Embedded HMM (TDE-HMM) described in [#]_. Unlik
 
 
 State-specific power spectra
-----------------------------
+============================
 
 The frequency content of the three states show that the model successfully discriminated between the noise, the 40 Hz and the 25 Hz burst.
 
@@ -63,12 +63,12 @@ The frequency content of the three states show that the model successfully discr
   :align:   center
 
 Notes
-=====
+-----
 
 This repository contains Python adaptation for some of the functionalities proposed by the HMM-MAR toolbox [#]_. It was created for educational purpose. You should refer to the original Matlab toolbox is you want to use HMM for research.
 
 References
-==========
+----------
 
 .. [#] Quinn, A. J., van Ede, F., Brookes, M. J., Heideman, S. G., Nowak, M., Seedat, Z. A., … Woolrich, M. W. (2019). Unpacking Transient Event Dynamics in Electrophysiological Power Spectra. Brain Topography, 32(6), 1020–1034. https://doi.org/10.1007/s10548-019-00745-5
 
