@@ -5,12 +5,16 @@
 
 An introduction to Hidden Markov Modelling for electrophysiological data.
 
-This repository introduce Hidden Markov Modelling (HMM) of electrophysiological data .
+This repository introduce Hidden Markov Modelling (HMM) of electrophysiological data using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
-The HMM inference is realized using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
+Notebooks:
+----------
 
+  -  `Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
 
-Envelope threshold and Envelope HMM
+  -  `Time Delay Embedded HMM <https://github.com/LegrandNico/mne-hmm/blob/master/2%20-%20Embedded%20HMM.ipynb>`_.
+
+1- Envelope threshold and Envelope HMM
 ===================================
 
 Time-course Simulation
@@ -34,7 +38,7 @@ Wider band detection
   :align:   center
 
 
-Time Delay Embedded HMM
+2 - Time Delay Embedded HMM
 =======================
 
 TDE-HMM inference
@@ -49,7 +53,7 @@ Implementation of the Time Delay Embedded HMM (TDE-HMM) described in [#]_. Unlik
 State-specific power spectra
 ----------------------------
 
-The frequency content of the three states show that the model successfully discriminated between the 25 Hz burst, the 40 Hz burst and the noise.
+The frequency content of the three states show that the model successfully discriminated between the noise, the 40 Hz and the 25 Hz burst.
 
 .. figure::  https://github.com/LegrandNico/mne-hmm/blob/master/Images/Spectral0.png
   :align:   center
@@ -68,10 +72,10 @@ This repository contains Python adaptation for some of the functionalities propo
 References
 ==========
 
-[#] Quinn, A. J., van Ede, F., Brookes, M. J., Heideman, S. G., Nowak, M., Seedat, Z. A., … Woolrich, M. W. (2019). Unpacking Transient Event Dynamics in Electrophysiological Power Spectra. Brain Topography, 32(6), 1020–1034. https://doi.org/10.1007/s10548-019-00745-5
+.. [#] Quinn, A. J., van Ede, F., Brookes, M. J., Heideman, S. G., Nowak, M., Seedat, Z. A., … Woolrich, M. W. (2019). Unpacking Transient Event Dynamics in Electrophysiological Power Spectra. Brain Topography, 32(6), 1020–1034. https://doi.org/10.1007/s10548-019-00745-5
 
-[#] https://github.com/OHBA-analysis/Quinn2019_BurstHMM
+.. [#] https://github.com/OHBA-analysis/Quinn2019_BurstHMM
 
-[#] Vidaurre, D., Hunt, L. T., Quinn, A. J., Hunt, B. A. E., Brookes, M. J., Nobre, A. C., & Woolrich, M. W. (2018). Spontaneous cortical activity transiently organises into frequency specific phase-coupling networks. Nature Communications, 9(1). https://doi.org/10.1038/s41467-018-05316-z
+.. [#] Vidaurre, D., Hunt, L. T., Quinn, A. J., Hunt, B. A. E., Brookes, M. J., Nobre, A. C., & Woolrich, M. W. (2018). Spontaneous cortical activity transiently organises into frequency specific phase-coupling networks. Nature Communications, 9(1). https://doi.org/10.1038/s41467-018-05316-z
 
-[#] The HMM-MAR toolbox: https://github.com/OHBA-analysis/HMM-MAR
+.. [#] The HMM-MAR toolbox: https://github.com/OHBA-analysis/HMM-MAR
