@@ -3,9 +3,7 @@
 
 ----------------
 
-An introduction to Hidden Markov Modelling for electrophysiological data.
-
-This repository introduce Hidden Markov Modelling (HMM) of electrophysiological data using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
+This repository introduce Hidden Markov Modelling (HMM) for electrophysiological data using the methods described in [#]_ and [#]_. The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
 Notebooks:
 ----------
