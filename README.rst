@@ -3,10 +3,9 @@
 
 ----------------
 
-This repository introduce Hidden Markov Modelling (HMM) for electrophysiological data using the methods described in [#]_. The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
+This repository introduce Hidden Markov Modeling (HMM) for electrophysiological data using the methods described in [#]_. The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
-Notebooks
-=========
+**Notebooks**
 
   -  `Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
 
