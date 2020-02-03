@@ -64,7 +64,7 @@ The frequency content of the three states show that the model successfully discr
 Notes
 -----
 
-This repository contains Python adaptation for some of the functionalities proposed by the HMM-MAR toolbox [#]_. It was created for educational purpose. You should refer to the original Matlab toolbox is you want to use HMM for research.
+This repository contains Python adaptation for some of the functionalities proposed by the HMM-MAR toolbox [#]_. It was created for educational purpose. You should refer to the original Matlab toolbox if you want to use HMM for research.
 
 References
 ----------
