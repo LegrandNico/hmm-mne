@@ -9,17 +9,18 @@ The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.rea
 
 **Notebooks**
 
-  -  `Introduction to HMM <https://github.com/LegrandNico/hmm-mne/blob/master/Hidden%20Markov%20Models.ipynb>`_.
+`Introduction to HMM <https://github.com/LegrandNico/hmm-mne/blob/master/Hidden%20Markov%20Models.ipynb>`_.
 
-  -  `Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
+`Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
 
-  .. image:: https://colab.research.google.com/github/LegrandNico/mne-hmm/blob/master/notebooks/1-EnvelopeHMM.ipynb
-    :target: https://colab.research.google.com/assets/colab-badge.svg
+.. image:: https://colab.research.google.com/assets/colab-badge.svg
+  :target: https://colab.research.google.com/github/LegrandNico/hmm-mne/blob/master/1-EnvelopeHMM.ipynb
 
-  -  `Time Delay Embedded HMM <https://github.com/LegrandNico/mne-hmm/blob/master/2%20-%20Embedded%20HMM.ipynb>`_.
 
-  .. image:: https://colab.research.google.com/github/LegrandNico/mne-hmm/blob/master/notebooks/2-EmbeddedHMM.ipynb
-    :target: https://colab.research.google.com/assets/colab-badge.svg
+`Time Delay Embedded HMM <https://github.com/LegrandNico/mne-hmm/blob/master/2%20-%20Embedded%20HMM.ipynb>`_.
+
+.. image:: https://colab.research.google.com/assets/colab-badge.svg
+  :target: https://colab.research.google.com/github/LegrandNico/hmm-mne/blob/master/2-EmbeddedHMM.ipynb
 
 
 1- Envelope threshold and Envelope HMM
@@ -75,7 +76,7 @@ The frequency content of the three states show that the model successfully discr
 Notes
 -----
 
-This repository contains Python adaptation for some of the functionalities proposed by the HMM-MAR toolbox [#]_. It was created for educational purpose. You should refer to the original Matlab toolbox is you want to use HMM for research.
+This repository contains Python adaptation for some of the functionalities proposed by the HMM-MAR toolbox [#]_. It was created for educational purpose. You should refer to the original Matlab toolbox if you want to use HMM for research.
 
 References
 ----------
