@@ -3,27 +3,33 @@
 import numpy as np
 import scipy.signal as signal
 
-def get_simulation(mode='short', sfreq=256, seconds=10, f1=25, f2=40, seed=123):
+
+def simulate_single_channel(
+    mode: str = 'short', sfreq: int = 256, seconds: float = 10.0,
+    f1: float = 25.0, f2: float = 40.0, seed: int = 123
+    )-> np.array:
     """Generate time serie with high-frequency bursts.
-    
+
     Adapted from [1, 2].
-    
+
     Parameters
     ----------
     mode : str
-        Length of the simulation ['short', 'long']. Default is `short`.
+        Length of the simulation (`'short'` or `'long'`). If `'long'` is selected,
+        the simulation is extended to eight times its lenght. Burst patterns
+        are repeated in time but the noise is not. Default is set to `'short'`.
     sfreq : int
-        Sampling frequency.
+        Sampling frequency. Default is set to 256 Hz.
     seconds : int
-        Length of recording. If mode is ´long´, will be multiplied by 8.
+        Length of recording. If mode is set to ´'long'´, this will be multiplied by 8.
     f1, f2 : int
         Frequency of the first and second burst (Hz).
 
     Return
     ------
-    x : array
+    x : numpy.array
         Array containing the simulation.
-    
+
     References
     ----------
     [1] Quinn, A. J., van Ede, F., Brookes, M. J., Heideman, S. G.,
@@ -49,7 +55,8 @@ def get_simulation(mode='short', sfreq=256, seconds=10, f1=25, f2=40, seed=123):
     # Define burst occurances and durations
     seconds = 10
     np.random.seed(seed)
-    starts = np.sort(np.round(np.array([0.1, 0.3, 0.6, 0.9]) * (seconds/2) * sfreq)).astype(int)
+    starts = np.sort(
+        np.round(np.array([0.1, 0.3, 0.6, 0.9]) * (seconds/2) * sfreq)).astype(int)
     starts2 = (starts + (seconds/2 * sfreq)).astype(int)
     duration = np.round((np.random.random(4) + 0.1) * sfreq).astype(int)
 
@@ -73,7 +80,7 @@ def get_simulation(mode='short', sfreq=256, seconds=10, f1=25, f2=40, seed=123):
     amp2 = .3
     amp3 = .3
 
-    if mode[:4] == 'long':
+    if mode == 'long':
         # Extend simulation to eight times its lenght
         # Burst patterns are repeated in time but the noise is not
         noise = np.random.random(len(time_vect) * 8)
@@ -82,7 +89,7 @@ def get_simulation(mode='short', sfreq=256, seconds=10, f1=25, f2=40, seed=123):
         x3 = np.tile(amp3 * x3, (1, 8))
         time_vect = np.linspace(0, seconds * 8, seconds * sfreq * 8)
 
-    elif mode[:4] == 'short':
+    elif mode == 'short':
         # Return short form of simulation
         noise = np.random.random(len(time_vect))
         x = signal.filtfilt(b, a, noise)
@@ -95,5 +102,5 @@ def get_simulation(mode='short', sfreq=256, seconds=10, f1=25, f2=40, seed=123):
 
     # Concatenate different parts of simulation
     x = np.vstack([data, x2[0, :], x3[0, :]])
-    
+
     return x

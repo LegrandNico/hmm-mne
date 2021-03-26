@@ -3,13 +3,24 @@
 
 ----------------
 
-This repository introduce Hidden Markov Modeling (HMM) for electrophysiological data using the methods described in [#]_. The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
+HMM-MNE is a Python module implementing Hidden Markov Modeling (HMM) for electrophysiological data using the methods described in [#]_.
+
+The HMM inference is preformed using the `hmmlearn library <https://hmmlearn.readthedocs.io/en/stable/>`_.
 
 **Notebooks**
 
+  -  `Introduction to HMM <https://github.com/LegrandNico/hmm-mne/blob/master/Hidden%20Markov%20Models.ipynb>`_.
+
   -  `Envelope threshold and HMM <https://github.com/LegrandNico/mne-hmm/blob/master/1%20-%20Envelope%20HMM.ipynb>`_.
 
+  .. image:: https://colab.research.google.com/github/LegrandNico/mne-hmm/blob/master/notebooks/1-EnvelopeHMM.ipynb
+    :target: https://colab.research.google.com/assets/colab-badge.svg
+
   -  `Time Delay Embedded HMM <https://github.com/LegrandNico/mne-hmm/blob/master/2%20-%20Embedded%20HMM.ipynb>`_.
+
+  .. image:: https://colab.research.google.com/github/LegrandNico/mne-hmm/blob/master/notebooks/2-EmbeddedHMM.ipynb
+    :target: https://colab.research.google.com/assets/colab-badge.svg
+
 
 1- Envelope threshold and Envelope HMM
 --------------------------------------
